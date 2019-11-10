@@ -6,6 +6,17 @@ body {
     color: #0E185C;
 }
 
+/*Grid Element*/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    padding: 20px;
+}
+
 /*mainpage*/
 a {
     text-decoration: none;
@@ -51,14 +62,39 @@ hr {
     color: #EC282C;
 }
 
-/* Header Menu*/
+/*Event page*/
 
-/* Style the header with a grey background and some padding */
+.event {
+    background-color: #D8EED5;
+}
+
+.event_image {
+    max-width: 500px;
+    position: relative;
+    float center;
+    margin-top: 20px;
+}
+
+.subtitle .event {
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 10px;
+}
+
+/*Header event*/
+.header_event {
+    overflow: hidden;
+    background-color: #D8EED5;
+    padding: 20px 10px;
+    height: 250px;
+}
+
+/* Header Menu*/
 .header {
     overflow: hidden;
     background-color: #0E185C;
     padding: 20px 10px;
-    height: 400px;
+    height: 300px;
 }
 
 /* Style the header links */
@@ -79,7 +115,6 @@ hr {
     height: auto;
     display: inherit;
     float: left;
-
 }
 
 /* Change the background color on mouse-over */
@@ -89,7 +124,7 @@ hr {
 
 /* Style the active/current link*/
 .header a.active {
-    background-color: dodgerblue;
+    background-color: #0E185C;
     color: white;
 }
 
@@ -99,29 +134,46 @@ hr {
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     .header a {
-        float: none;
         display: block;
         text-align: right;
     }
 
     .header-right {
-        float: none;
+        float: right;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin-top: -150px;
+        float: center;
+    }
+
+    .header {
+        overflow: hidden;
+        background-color: #0E185C;
+        padding: 20px 10px;
+        height: 400px;
     }
 }
 
 /*Slideshow*/
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 500px;
+    max-width: 100%;
     position: relative;
-    margin-top: -150px;
-    float center;
+    float: center;
 }
 
 /* Hide the images by default */
